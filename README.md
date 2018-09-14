@@ -46,6 +46,17 @@ So make sure to edit that.
 Just run `yarn build` and it will
 build everything to the same outputs specified above.
 
+## Deployment
+This comes with `gh-pages` as a dependency. Make sure that you have added the remote origin to your repo:
+
+- `git init`
+- `git remote add origin ssh@....`
+- `yarn deploy`
+
+Deploying would build everything: your module, your demo site, and will push to `gh-pages` branch.
+
+Note: If gh-pages isn't created yet, it will create on for you. Nice!
+
 
 ## Important
 Please refer to the documentation of [Parcel](https://github.com/parcel-bundler/parcel) and [Microbundle](https://github.com/developit/microbundle) should you wish to change any of the configuration.
