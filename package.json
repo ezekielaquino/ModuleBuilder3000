@@ -1,23 +1,23 @@
 {
   "name": "modulebuilder3000",
   "version": "0.0.1",
-  "description": "My super awesome module!",
+  "description": "Super easy module builder setup with Microbundle and Parcel",
   "keywords": [
-    "my",
-    "module"
+    "module",
+    "build"
   ],
-  "main": "../dist/index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/ezekielaquino/ModuleBuilder3000",
   "author": "Ezekiel Aquino <ezekielaquino@gmail.com>",
   "scripts": {
     "microbundle": "cd src && microbundle watch -o ../dist",
-    "microbundle:build": "cd src && microbundle build -o ../dist",
-    "parcel": "cd demo/src && parcel index.html --out-dir ../",
-    "parcel:build": "cd demo/src && parcel build index.html --out-dir ../ --public-url '.'",
+    "microbundle:build": "cd src && microbundle build -o ../dist --sourcemap false",
+    "parcel": "cd demo/src && parcel index.html --out-dir ../build",
+    "parcel:build": "cd demo/src && parcel build index.html --out-dir ../build --public-url '.'",
     "start": "yarn microbundle & yarn parcel",
     "build": "yarn microbundle:build && yarn parcel:build",
-    "predeploy": "yarn build",
-    "deploy": "yarn deploy --remove src"
+    "predeploy": "rm -rf demo/build && yarn build",
+    "deploy": "gh-pages -d demo/build"
   },
   "devDependencies": {
     "microbundle": "^0.6.0",
@@ -25,7 +25,7 @@
     "stylus": "^0.54.5",
     "gh-pages": "^1.2.0"
   },
-  "umd:main": "../dist/index.umd.js",
-  "module": "../dist/index.m.js",
-  "source": "MyModule.js"
+  "umd:main": "dist/index.umd.js",
+  "module": "src/index.js",
+  "source": "src/index.js"
 }

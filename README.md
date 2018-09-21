@@ -37,14 +37,13 @@ This will in parallel:
 
 **Note**
 
-The module's filename in `./dist` is defined by "name" specified in `./src/package.json`.
+The module's filename in `./dist` is defined by "name" specified in `./src/package.json`. Also make sure to edit necessary entries in `./package.json` (e.g. entry points)
 
-So make sure to edit that.
+Make sure to edit those!
 
 
 ## When you're ready
-Just run `yarn build` and it will
-build everything to the same outputs specified above.
+Just run `yarn build` and it will build everything to the same outputs specified above.
 
 ## Deployment
 This comes with `gh-pages` as a dependency. Make sure that you have added the remote origin to your repo:
