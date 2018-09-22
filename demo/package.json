@@ -1,0 +1,20 @@
+{
+  "name": "module-demo",
+  "version": "0.0.1",
+  "description": "My amazing demo site",
+  "license": "GPL-3.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/ezekielaquino/ModuleBuilder3000",
+  "author": "Ezekiel Aquino <ezekielaquino@gmail.com>",
+  "scripts": {
+    "start": "parcel index.html --out-dir ../build",
+    "build": "parcel build index.html --out-dir ../build --public-url '.' --no-source-maps",
+    "predeploy": "rm -rf build && yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.0",
+    "parcel": "^1.9.7",
+    "stylus": "^0.54.5"
+  }
+}

@@ -10,14 +10,9 @@
   "repository": "https://github.com/ezekielaquino/ModuleBuilder3000",
   "author": "Ezekiel Aquino <ezekielaquino@gmail.com>",
   "scripts": {
-    "microbundle": "cd src && microbundle watch -o ../dist",
-    "microbundle:build": "cd src && microbundle build -o ../dist --sourcemap false",
-    "parcel": "cd demo/src && parcel index.html --out-dir ../build",
-    "parcel:build": "cd demo/src && parcel build index.html --out-dir ../build --public-url '.'",
-    "start": "yarn microbundle & yarn parcel",
-    "build": "yarn microbundle:build && yarn parcel:build",
-    "predeploy": "rm -rf demo/build && yarn build",
-    "deploy": "gh-pages -d demo/build"
+    "start": "cd src && microbundle watch --output ../dist",
+    "build": "cd src && microbundle build --output ../dist --sourcemap false",
+    "dev": "yarn start & yarn --cwd demo start"
   },
   "devDependencies": {
     "microbundle": "^0.6.0",

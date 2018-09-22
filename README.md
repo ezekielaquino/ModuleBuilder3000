@@ -25,15 +25,23 @@ First you must clone this repository
   git clone git@github.com:ezekielaquino/ModuleBuilder3000.git yourDirectoryName
 ```
 
-then go to the directory you cloned this repo in e.g. `cd yourDirectoryName`
+There are a couple of commands:
 
-Just run `yarn start` from the root directory!
+**From root**
 
-This will in parallel:
+`yarn dev`
+Would watch your module source files, as well as your demo. This would start your dev server too so you can build and demo straight away.
 
-- Watch your plugin/module files and output them in `/dist`
-- Watch your static site/dev site/demo site (whatever)
-- Have a dev server you can access `localhost:****`
+`yarn start`
+Would just watch and compile your module source files for changes
+
+`yarn build`
+Build your module code for production!
+
+--
+
+If you `cd` to `demo` you may also run the `start` and `build` scripts to do the same things described above for your demo site.
+
 
 **Note**
 
@@ -50,6 +58,7 @@ This comes with `gh-pages` as a dependency. Make sure that you have added the re
 
 - `git init`
 - `git remote add origin ssh@....`
+- `cd demo` (the deploy script is in your demo folder!)
 - `yarn deploy`
 
 Deploying would build everything: your module, your demo site, and will push to `gh-pages` branch.
