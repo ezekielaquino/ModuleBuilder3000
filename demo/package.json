@@ -7,14 +7,14 @@
   "repository": "https://github.com/ezekielaquino/ModuleBuilder3000",
   "author": "Ezekiel Aquino <ezekielaquino@gmail.com>",
   "scripts": {
-    "start": "parcel index.html --out-dir ../build",
-    "build": "parcel build index.html --out-dir ../build --public-url '.' --no-source-maps",
+    "start": "parcel src/index.html --out-dir ../build",
+    "build": "parcel build src/index.html --out-dir ../build --public-url '.' --no-source-maps",
     "predeploy": "rm -rf build && yarn build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^2.0.0",
-    "parcel": "^1.9.7",
+    "parcel": "^1.11.0",
     "stylus": "^0.54.5"
   }
 }
